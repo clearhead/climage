@@ -45,8 +45,10 @@ body {
   if (pathname === '/') {
     link.parentNode.removeChild(link);
     main.src = '/assets/clearhead/clearhead.png';
+    main.onclick = function () {window.location = 'http://clearhead.me/'};
   } else {
     main.src = link.href = '/i'+pathname; // +'") center center no-repeat';
+    main.onclick = function () {window.location = this.src;};
   }
 </script>
 
