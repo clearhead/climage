@@ -5,6 +5,11 @@
 body {
   background-color: #25ccfb;
 }
+#link {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
 #main {
   max-width: 90%;
   max-height: 90%;
@@ -33,8 +38,9 @@ body {
 <img class="right" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAABUCAYAAAD59dWtAAAAAXNSR0IArs4c6QAAActpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx4bXA6Q3JlYXRvclRvb2w+QWRvYmUgSW1hZ2VSZWFkeTwveG1wOkNyZWF0b3JUb29sPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KKS7NPQAAAyxJREFUaAXtmoFxozAQRe2rwB2YDs4lkA4ogesgJaQDl8ClguQqIB3YVwHuwO7A938GZhKMVosWEDejndkBJK326VsSBLLZJEsKfFNg++2qvbjf70ecPg/VoewDfoP/bc/P2+2W13EMsC/wsVYjoITvFqdG0gZusQrB2WLgFtJeLMHnVxxJrr3Elkv2VUyp9o+Bzn4PlIUWUeE3QFehHajikOBokdURe0K5eYoMbmvdqJAgx/kFnsFpB/i+PeY4jrUzAp6ibINUC86tjD/5GDuNHeXk7UGbwasR1PPOae0IAZzDGyV4qe131naA5VTRTJMr2mWzwozpHDAV3GfrmBrdwEBb+4hRn3ftox8Bw+nRwCWro4N+BQApF6LPsq8x0c9B61uEq5vL3Kclu0ZXtQ8A2koiRl3Rj4l6DaCDB3hd04JqAfgkQKumxdDz8Jy/xKvQObdAPg2KtjTwu0iz2eSe+s2iwHgOvgCIz8Qu27squvJFgdukH13ygePqpgQZ+QLGZasEvrhoUb4T6j6rxL/pfMEh9dgJCOXcwjDPRSaxMgRIE8O92NXOBxxj0blYVeUJWCWToVFS2CCeKjQprJLJ0CgpbBBPFZoUVslkaJQUNoinCk0Kq2QyNEoKG8RThSaFVTIZGiWFDeKpQpPCKpkMjRZXWPNKVRrP4sCAkV5H3SRY1sUAzgWos1D3WRUD+KcAdRHqogHnApT0KlYIm6kKC67gi0DBDjOlDusWoLUA63wFG5bNGAVQ39dQ1Xe6JRedD+iPUZPpwqGub+4202Uz9gRYfrLlv8tIVhrTTBMOQn7dlD7XchDrUFcJS+BiGnkMvQBCMw0I+2ZIM00oIF5IojDO6900WQN6QfIc3sC1FueuBroS7ltY/UGUAZqEhSAzV34Br+C+7QpNHswE6/wSijQZhkTnPOPPt2+PoT/lDfG/8KXzHcdpDbDHB11sBZwyoQOVBzcDLAe/k7MaatF5yLxE2IM1KMkNKLrQh7TjCwha6rJN0ArJmDDEagQtB9qNFUm1dyoOiovpGZ518VGOAOBCGbIahazjzWK+hRQ6akDxdpuHxqe4/1GBfxndpagL+Xc2AAAAAElFTkSuQmCC">
 
 <img id="main" class="centered" />
+<a id="link">raw image</a>
 <script>
-  main.src = '/i'+location.pathname; // +'") center center no-repeat';
+  main.src = link.href = '/i'+location.pathname; // +'") center center no-repeat';
 </script>
 
 </body>
