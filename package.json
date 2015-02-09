@@ -1,0 +1,19 @@
+{
+  "name": "climage",
+  "version": "0.0.1",
+  "description": "clearhead image cdn",
+  "main": "./public/index.html",
+  "scripts": {
+    "test": "echo \"TODO: specify tests\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clearhead/climage.git"
+  },
+  "author": "tom@clearhead.me",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/clearhead/climage/issues"
+  },
+  "homepage": "https://github.com/clearhead/climage"
+}
