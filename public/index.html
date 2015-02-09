@@ -41,7 +41,13 @@ body {
 <img id="main" class="centered" />
 <a id="link">direct link</a>
 <script>
-  main.src = link.href = '/i'+location.pathname; // +'") center center no-repeat';
+  var pathname = location.pathname;
+  if (pathname === '/') {
+    link.parentNode.removeChild(link);
+    main.src = '/assets/clearhead/clearhead.png';
+  } else {
+    main.src = link.href = '/i'+pathname; // +'") center center no-repeat';
+  }
 </script>
 
 </body>
