@@ -55,6 +55,33 @@
   <script>
     window.optimizely = window.dataLayer = window._gaq = [];
     window.ga = $.cookie = $.removeCookie = $.noop;
+    'activeExperiments,allExperiments,all_experiments,allVariations,'+
+    'data,variationIdsMap,variation_map,variationMap,variationNamesMap'
+      .split(',').forEach(function (v,i) {
+        optimizely[v] = optimizely[v] || {};
+      });
+
+    'activate,activateGeoDelayedExperiments,activateSiteCatalyst,'+
+    'activateUniversalAnalytics,addToAudience,addToSegment,'+
+    'bindTrackElement,bucketUser,bucketVisitor,clickTalePlayback,'+
+    'clickTaleRecord,customTag,delayDomReadyEval,delayPageviewTracking,'+
+    'disable,getAccountId,getElementsByClassName,getProjectId,'+
+    'googleAnalyticsCustomVariableScope,integrationPrefix,log,optOut,'+
+    'optOutThirdPartyCookies,overrideUrl,push,removeFromAllAudiences,'+
+    'removeFromAllSegments,removeFromAudience,removeFromReportableAudiences,'+
+    'removeFromSegment,sc_activate,sc_svar,setCookieDomain,'+
+    'setCookieExpiration,setDimensionValue,setUserId,skipPageTracking,'+
+    'storeThirdPartyData,timeout,trackEvent,verbose'
+      .split(',').forEach(function (v,i) {
+        optimizely[v] = optimizely[v] || $.noop;
+      });
+
+    'audiences,customTags,experiments,sections,segments,'+
+    'state,thirdParty,variations,visitor'
+      .split(',').forEach(function (v,i) {
+        optimizely.data[v] = optimizely.data[v] || {};
+      });
+
   </script>
 </head>
 
