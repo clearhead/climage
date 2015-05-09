@@ -2,65 +2,30 @@
 <head>
 	<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,300italic,' rel='stylesheet' type='text/css'>
 	<style type="text/css">
-			body{
-				background-color: #3CC8F5;
-				text-align: center;
-				font-family: 'Source Sans Pro';}
-
-			img{
-				width: 80px;
-				margin: 48px 0 0 0;}
-
-			h1{
-				font-size: 72px;
-				color: #f4f7f9;
-				font-weight: 700;
-				margin: 0;}
-
-			h2{
-				font-size: 27px;
-				color: #f4f7f9;
-				font-weight: 300;
-				margin: 0;}
-
-			p{
-				font-size: 21px;
-				color: #0f7896;
-				font-weight: 300;
-				line-height: 27px;
-				margin: 60px 132px 0 132px;}
-
-			.center {
-  				width: 900px;
-  				margin: auto;
-  				position: absolute;
-  				top: 42%; left: 50%;
-  					-webkit-transform: translate(-50%,-50%);
-     				-ms-transform: translate(-50%,-50%);
-          			transform: translate(-50%,-50%);}
-
-			.head{
-				color: #19A0C3;}
-
-			.percent{
-				font-size: 93%;}
-
-			a{
-				color: #0f7896;
-				font-style: italic;
-				font-weight: 300;
-				text-decoration: none;}
+		body { background-color: #3CC8F5; text-align: center; font-family: 'Source Sans Pro'; }
+    img { width: 80px; margin: 48px 0 0 0; }
+    h1 { font-size: 72px; color: #f4f7f9; font-weight: 700; margin: 0; }
+    h2 { font-size: 27px; color: #f4f7f9; font-weight: 300; margin: 0; }
+    p { font-size: 21px; color: #0f7896; font-weight: 300; line-height: 27px; margin: 60px 132px 0 132px; }
+    .center { width: 900px; margin: auto; position: absolute; top: 42%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+    .head { color: #19A0C3; }
+    .percent { font-size: 93%; }
+    a { color: #0f7896; font-style: italic; font-weight: 300; text-decoration: none; }
 	</style>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script>
+    // shim globals from optimizely, ga, etc... so editor doesn't error
     window.optimizely = window.dataLayer = window._gaq = [];
     window.ga = $.cookie = $.removeCookie = $.noop;
+
+    // optimizely.{}'s
     'activeExperiments,allExperiments,all_experiments,allVariations,'+
     'data,variationIdsMap,variation_map,variationMap,variationNamesMap'
       .split(',').forEach(function (v,i) {
         optimizely[v] = optimizely[v] || {};
       });
 
+    // optimizely.fn()'s
     'activate,activateGeoDelayedExperiments,activateSiteCatalyst,'+
     'activateUniversalAnalytics,addToAudience,addToSegment,'+
     'bindTrackElement,bucketUser,bucketVisitor,clickTalePlayback,'+
@@ -76,6 +41,7 @@
         optimizely[v] = optimizely[v] || $.noop;
       });
 
+    // optimizely.data.{}'s
     'audiences,customTags,experiments,sections,segments,'+
     'state,thirdParty,variations,visitor'
       .split(',').forEach(function (v,i) {
