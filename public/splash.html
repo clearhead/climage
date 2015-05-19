@@ -16,7 +16,7 @@
   <script>
     // shim globals from optimizely, ga, etc... so editor doesn't error
     window.optimizely = window.dataLayer = window._gaq = [];
-    window.ga = $.cookie = $.removeCookie = $.noop;
+    window.ga = $.cookie = $.removeCookie = window.timpl = $.noop;
 
     // optimizely.{}'s
     'activeExperiments,allExperiments,all_experiments,allVariations,'+
